@@ -1,0 +1,10 @@
+services:
+  plantuml-animator:
+    image: public.ecr.aws/lambda/java:21
+    build:
+      context: ./java
+    container_name: example-handler
+    ports:
+      - 9000:8080
+networks:
+  lambda: {}
